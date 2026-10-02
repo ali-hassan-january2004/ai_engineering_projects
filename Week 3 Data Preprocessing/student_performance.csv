@@ -1,0 +1,6 @@
+student_id,study_hours,attendance,previous_score,city,internet_access,final_score
+S001,4.5,87,72,Lahore,Yes,81
+S002,6.0,92,85,lahore,Yes,90
+S003,,80,60,Karachi,No,58
+S004,2.0,60,40,Islamabad,Yes,45
+S005,8.0,95,98,Lahore,Yes,95

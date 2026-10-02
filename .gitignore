@@ -1,2 +1,25 @@
+# Byte-compiled / optimized / DLL files (Python cache)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+ENV/
 .venv/
+
+# Jupyter Notebook Checkpoints & Cache
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+
+# Large / Raw / Sensitive Data Files (Optional but recommended for large datasets)
+# data/*.csv
