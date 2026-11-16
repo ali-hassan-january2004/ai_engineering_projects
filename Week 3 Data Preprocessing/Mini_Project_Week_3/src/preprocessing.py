@@ -1,5 +1,7 @@
-import pandas as pd
+from pathlib import Path
+
 import numpy as np
+import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
@@ -60,7 +62,7 @@ def prepare_data(filepath: str):
     return X_train_proc, X_test_proc, y_train, y_test, preprocessor
 
 if __name__ == "__main__":
-    data_path = "data/student_performance.csv"
+    data_path = Path(__file__).resolve().parents[1] / "data" / "student_performance.csv"
     print("--- Running Preprocessing Pipeline ---")
     
     X_train_proc, X_test_proc, y_train, y_test, preprocessor = prepare_data(data_path)

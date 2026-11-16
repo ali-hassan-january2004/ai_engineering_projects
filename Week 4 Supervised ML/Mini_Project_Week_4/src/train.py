@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from preprocessing import load_and_preprocess_data
@@ -8,7 +10,8 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 
 def execute_experiments():
-    reg_data, cls_data = load_and_preprocess_data("data/student_performance.csv")
+    data_path = Path(__file__).resolve().parents[1] / "data" / "student_performance.csv"
+    reg_data, cls_data = load_and_preprocess_data(data_path)
     X_tr_r, X_te_r, y_tr_r, y_te_r = reg_data
     X_tr_c, X_te_c, y_tr_c, y_te_c = cls_data
 

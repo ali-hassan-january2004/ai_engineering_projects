@@ -1,10 +1,14 @@
+from pathlib import Path
+
 import pandas as pd
+
 from src.features import create_customer_features
 from src.clustering import build_clustering_pipeline, evaluate_kmeans_range, get_pca_projection
 
 def main():
     print("1. Loading raw customer dataset...")
-    df = pd.read_csv("data/customer_data.csv")
+    data_path = Path(__file__).resolve().parent / "data" / "customer_data.csv"
+    df = pd.read_csv(data_path)
     print(f"Dataset shape: {df.shape}")
 
     print("\n2. Applying feature engineering...")

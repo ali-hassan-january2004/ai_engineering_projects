@@ -1,4 +1,7 @@
+from pathlib import Path
+
 import pandas as pd
+
 from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report, f1_score
@@ -11,7 +14,8 @@ from preprocessing import build_preprocessor
 
 def train_and_evaluate():
   # Load dataset
-  df = pd.read_csv("../data/student_performance.csv")
+  data_path = Path(__file__).resolve().parents[1] / "data" / "student_performance.csv"
+  df = pd.read_csv(data_path)
 
   X = df.drop(columns=["student_id", "passed"])
   y = df["passed"]
